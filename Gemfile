@@ -20,8 +20,16 @@ gem 'jbuilder', '~> 2.5'                         # Build JSON APIs with ease. Re
 # gem 'bcrypt', '~> 3.1.7'                       # Use ActiveModel has_secure_password
 # gem 'capistrano-rails', group: :development    # Use Capistrano for deployment
 
+gem 'haml-rails'                                 # Haml-rails provides Haml generators for Rails 4.
+gem 'bootstrap-sass'                             # bootstrap-sass is a Sass-powered version of Bootstrap, ready to drop right into your Sass powered applications.
+gem 'simple_form'                                # Simple Form aims to be as flexible as possible while helping you with powerful components to create your forms.
+gem 'devise'                                     # Devise is a flexible authentication solution for Rails based on Warden.
+gem 'cancancan'                                  # CanCanCan is an authorization library for Ruby 2.0+ and Ruby on Rails 3+ which restricts what resources a given user is allowed to access.
+
 group :development, :test do
   gem 'byebug', platform: :mri                   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'spirit_hands'                             # This repo is an improved fork with real configuration syntax, with updates and bug fixes based on jazz_hands.
+
 end
 
 group :development do
