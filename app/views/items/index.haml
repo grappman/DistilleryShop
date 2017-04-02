@@ -1,0 +1,14 @@
+.container
+  .row.row-offcanvas.row-offcanvas-right
+    .col-xs-6.col-sm-3
+      .list-group
+        = render(partial: 'categories/partials/category', collection: @categories)
+        - puts '!!!!!!!!!!!!!!'
+        - puts @categories
+        - puts '!!!!!!!!!!!!!!'
+    .col-xs-12.col-sm-9
+      .row
+        = render(partial: 'items/partials/item', collection: @items)
+  %hr/
+  %footer
+    %p © 2016 Company, Inc.

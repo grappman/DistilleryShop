@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+  devise_for :users
+
   resources :items
-  resources :categories
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :categories do
+    resources :items
+  end
+
+  resources :users do
+    resources :orders
+  end
+
+  get 'home', to: 'static#home'
+
+  root 'static#home'
+
 end
