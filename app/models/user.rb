@@ -1,5 +1,7 @@
 class User < ApplicationRecord
 
+  mount_uploader :avatar, ImageUploader
+
   enum role:   [:user, :admin]
   enum status: [:active, :blocked]
 
