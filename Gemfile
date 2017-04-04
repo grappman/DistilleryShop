@@ -18,6 +18,8 @@ gem 'cancancan'                                  # CanCanCan is an authorization
 gem 'rails_admin'                                # RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data.
 gem 'inherited_resources'                        # Inherited Resources speeds up development by making your controllers inherit all restful actions so you just have to focus on what is important.
 gem 'carrierwave'                                # This gem provides a simple and extremely flexible way to upload files from Ruby applications.
+gem 'mini_magick'                                # A ruby wrapper for ImageMagick or GraphicsMagick command line.
+
 group :development, :test do
   gem 'byebug', platform: :mri                   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'spirit_hands'                             # This repo is an improved fork with real configuration syntax, with updates and bug fixes based on jazz_hands.
