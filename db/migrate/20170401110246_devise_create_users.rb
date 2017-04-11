@@ -22,6 +22,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string   :first_name
       t.string   :last_name
       t.string   :avatar
+      t.string   :address
+      t.string   :phone
 
       t.integer  :role,    null: false, default: 0
       t.integer  :status,  null: false, default: 0

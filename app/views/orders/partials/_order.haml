@@ -1,0 +1,13 @@
+.col-md-3
+  .panel.panel-default
+    .panel-heading
+      .panel-title= order.item.name
+      .panel-body
+        = image_tag(order.item.image.thumb, class: 'img-thumbnail img-responsive')
+        %p=  truncate(order.item.description, length: 66)
+        = link_to('View details', item_path(order.item), class: 'btn btn-default btn-block')
+        - if user_signed_in?
+          = simple_form_for(order, remote: true) do |f|
+            = f.input   :quantity,    input_html: { value: order.quantity }
+            = f.button  :submit,    'Update', class: 'btn btn-success btn-block'
+            = link_to('Delete', order_path(order), method: :delete, remote: true, class: 'btn btn-danger btn-block', data:{confirm: 'Are you sure?'})

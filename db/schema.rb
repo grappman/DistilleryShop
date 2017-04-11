@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20170401110246) do
     t.integer  "user_id",                null: false
     t.integer  "item_id",                null: false
     t.integer  "status",     default: 0, null: false
+    t.integer  "quantity",               null: false
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.index ["item_id"], name: "index_orders_on_item_id", using: :btree
@@ -57,6 +58,8 @@ ActiveRecord::Schema.define(version: 20170401110246) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "avatar"
+    t.string   "address"
+    t.string   "phone"
     t.integer  "role",                   default: 0,  null: false
     t.integer  "status",                 default: 0,  null: false
     t.datetime "created_at",                          null: false

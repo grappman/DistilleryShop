@@ -1,5 +1,18 @@
-.col-xs-6.col-lg-4
-  %h2= item.name
-  %p=  item.description
-  %p
-    %a.btn.btn-default{:href => "#", :role => "button"} View details »
+.col-md-4
+  .panel.panel-default
+    .panel-heading
+      .panel-title= item.name
+      .panel-body
+        = image_tag(item.image.thumb, class: 'img-thumbnail img-responsive')
+        %p=  truncate(item.description, length: 66)
+        %p= "$ #{item.price}"
+        %p
+          = link_to('View details', item_path(item), class: 'btn btn-default btn-block')
+          - if user_signed_in?
+            = simple_form_for([current_user, Order.new], remote: true) do |f|
+              .hidden
+                = f.input :item_id,   input_html: { value: item.id }
+              = f.input   :quantity,  input_html: { value: 1 }
+              = f.button  :submit,    'Add to basket', class: 'btn btn-success btn-block'
+          - else
+            = link_to('Sign in to add', new_user_session_path, class: 'btn btn-default')

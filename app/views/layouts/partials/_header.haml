@@ -9,9 +9,9 @@
       %a.navbar-brand{ href: root_url } Distillery Shop
     #navbar.collapse.navbar-collapse
       %ul.nav.navbar-nav
-        %li.active
-          = link_to 'Home', root_url
-        %li
-          = link_to 'Items', items_path
-        %li
-          -#= link_to 'Basket', user_orders_path(current_user)
+        = navigation_bar('Home',    root_url)
+        = navigation_bar('Items',   items_path)
+        = navigation_bar('Basket',  user_orders_path(current_user))     if user_signed_in?
+        = navigation_bar('Login',   new_user_session_path)              unless user_signed_in?
+      %ul.nav.navbar-nav.navbar-right
+        = navigation_bar('Logout',  destroy_user_session_path, :delete) if user_signed_in?

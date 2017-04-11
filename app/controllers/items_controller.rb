@@ -1,12 +1,17 @@
 class ItemsController < InheritedResources::Base
 
-  before_action :authenticate_user!
-
   belongs_to :category, optional: true
 
   def index
-    @categories = Category.limit(100)
-    super
+    index! do
+      @categories = Category.limit(10)
+      if @category.present?
+        @items = @items
+      else
+        @items = @items.popular
+      end
+    end
+
   end
 
 end

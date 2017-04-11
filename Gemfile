@@ -8,7 +8,6 @@ gem 'uglifier'                                   # Use Uglifier as compressor fo
 gem 'coffee-rails'                               # Use CoffeeScript for .coffee assets and views
 gem 'jquery-rails'                               # Use jquery as the JavaScript library
 gem 'turbolinks'                                 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'jbuilder'                                   # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 
 gem 'haml-rails'                                 # Haml-rails provides Haml generators for Rails 4.
 gem 'bootstrap-sass'                             # bootstrap-sass is a Sass-powered version of Bootstrap, ready to drop right into your Sass powered applications.
@@ -19,6 +18,7 @@ gem 'rails_admin'                                # RailsAdmin is a Rails engine 
 gem 'inherited_resources'                        # Inherited Resources speeds up development by making your controllers inherit all restful actions so you just have to focus on what is important.
 gem 'carrierwave'                                # This gem provides a simple and extremely flexible way to upload files from Ruby applications.
 gem 'mini_magick'                                # A ruby wrapper for ImageMagick or GraphicsMagick command line.
+gem 'toastr-rails'                               # toastr is a Javascript library for Gnome / Growl type non-blocking notifications.
 
 group :development, :test do
   gem 'byebug', platform: :mri                   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -32,6 +32,3 @@ group :development do
   gem 'spring'                                   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring-watcher-listen'
 end
-
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby] # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-

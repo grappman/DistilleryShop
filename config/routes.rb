@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :items
+  resources :orders
+  resources :users
 
   resources :categories do
     resources :items

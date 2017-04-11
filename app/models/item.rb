@@ -4,9 +4,19 @@ class Item < ApplicationRecord
 
   belongs_to :category
 
+  has_many   :orders, dependent: :destroy
+
   validates :name,
             :description,
             :price,
             presence: true
+
+  class << self
+
+    def popular
+      Item.joins(:orders).group('items.id').order('count(orders.id) DESC')
+    end
+
+  end
 
 end

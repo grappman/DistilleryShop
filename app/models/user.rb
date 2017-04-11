@@ -5,6 +5,9 @@ class User < ApplicationRecord
   enum role:   [:user, :admin]
   enum status: [:active, :blocked]
 
+  has_many  :orders, dependent: :destroy
+
+  after_update :updating_status, if: 'phone_changed?'
 
   devise    :database_authenticatable,
             :registerable,
@@ -19,5 +22,9 @@ class User < ApplicationRecord
             presence: true
 
   validates :email, uniqueness: true
+
+  def updating_status
+    orders.update_all(status: 1)
+  end
 
 end

@@ -1,14 +1,14 @@
 .container
-  .row.row-offcanvas.row-offcanvas-right
+  .row
     .col-xs-6.col-sm-3
       .list-group
-        = render(partial: 'categories/partials/category', collection: @categories)
-        - puts '!!!!!!!!!!!!!!'
-        - puts @categories
-        - puts '!!!!!!!!!!!!!!'
+        = link_to('All', items_path, class: "list-group-item #{@category.present? ? nil : 'active'}")
+        = render(partial: 'categories/partials/category', collection: @categories, locals: {current_category: @category})
     .col-xs-12.col-sm-9
-      .row
-        = render(partial: 'items/partials/item', collection: @items)
-  %hr/
-  %footer
-    %p © 2016 Company, Inc.
+      .panel.panel-default
+        .panel-heading
+          %h1.panel-title
+            = @category.present? ? @category.name : 'ALL'
+        .panel-body
+          .row
+            = render(partial: 'items/partials/item', collection: @items)

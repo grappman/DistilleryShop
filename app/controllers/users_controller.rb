@@ -1,1 +1,12 @@
-class UsersController < InheritedResources::Base; end
+class UsersController < InheritedResources::Base
+
+  private
+
+  def user_params
+    params.require(:user).permit(
+        :address,
+        :phone
+    )
+  end
+
+end

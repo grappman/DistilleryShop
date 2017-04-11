@@ -1,0 +1,15 @@
+- if @orders.present?
+  .col-md-9
+    = render(partial: 'orders/partials/order', collection: @orders)
+  .col-md-3
+    .panel.panel-default
+      .panel-heading
+        .panel-title
+          Ordering
+        .panel-body
+          = simple_form_for(current_user, remote: true) do |f|
+            = f.input   :address, label: false, placeholder: 'Address'
+            = f.input   :phone,   label: false, placeholder: 'Phone'
+            = f.button  :submit,    'Submit', class: 'btn btn-success btn-block'
+- else
+  %h1.text-center.text-danger= 'Nothing to show'
