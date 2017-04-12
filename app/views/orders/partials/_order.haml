@@ -3,8 +3,9 @@
     .panel-heading
       .panel-title= order.item.name
       .panel-body
-        = image_tag(order.item.image.thumb, class: 'img-thumbnail img-responsive')
+        = image_tag(order.item.image.thumb, class: 'img-thumbnail img-responsive alignment')
         %p=  truncate(order.item.description, length: 66)
+        %b= "#{order.item.price} $"
         = link_to('View details', item_path(order.item), class: 'btn btn-default btn-block')
         - if user_signed_in?
           = simple_form_for(order, remote: true) do |f|

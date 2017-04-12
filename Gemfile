@@ -19,6 +19,7 @@ gem 'inherited_resources'                        # Inherited Resources speeds up
 gem 'carrierwave'                                # This gem provides a simple and extremely flexible way to upload files from Ruby applications.
 gem 'mini_magick'                                # A ruby wrapper for ImageMagick or GraphicsMagick command line.
 gem 'toastr-rails'                               # toastr is a Javascript library for Gnome / Growl type non-blocking notifications.
+gem 'cloudinary'
 
 group :development, :test do
   gem 'byebug', platform: :mri                   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,0 +1,9 @@
+development:
+  cloud_name: 'da1rex3nf'
+  api_key: '761791885148262'
+  api_secret: 'qkXfbETwcUu6SBcErgcrlC6xiJc'
+
+production:
+  cloud_name: 'da1rex3nf'
+  api_key: '761791885148262'
+  api_secret: 'qkXfbETwcUu6SBcErgcrlC6xiJc'

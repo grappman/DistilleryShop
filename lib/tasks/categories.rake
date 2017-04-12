@@ -21,6 +21,14 @@ namespace :create do
                 name:          'Shoes',
                 code:          '4',
             },
+            {
+                name:          'Candy',
+                code:          '5',
+            },
+            {
+                name:          'Detergents',
+                code:          '6',
+            },
         ]
     )
 

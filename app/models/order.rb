@@ -2,6 +2,8 @@ class Order < ApplicationRecord
 
   enum   status: { pending: 0, complete: 1 }
 
+  default_scope { order(updated_at: :desc) }
+
   belongs_to :user
   belongs_to :item
 
@@ -17,5 +19,9 @@ class Order < ApplicationRecord
 
   validates   :item,
               uniqueness: { scope: [:user, :status] }
+
+  def total_price
+    item.price * quantity
+  end
 
 end

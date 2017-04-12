@@ -18,13 +18,20 @@ class User < ApplicationRecord
 
   validates :email,
             :encrypted_password,
-            :first_name,
             presence: true
 
   validates :email, uniqueness: true
 
+  validates :phone,
+            presence: true,
+            on: :update
+
   def updating_status
     orders.update_all(status: 1)
+  end
+
+    def total_price
+    orders.inject(0) { |sum, p| sum + p.total_price }
   end
 
 end

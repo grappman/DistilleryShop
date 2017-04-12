@@ -1,0 +1,6 @@
+<% if resource.errors.present? %>
+  toastr.error('<%= resource.errors.full_messages.first %>');
+<% else %>
+  toastr.success('Order completed');
+  Turbolinks.visit( '<%= user_orders_path(current_user) %>' );
+<% end %>

@@ -3,7 +3,7 @@
     .panel-heading
       .panel-title= item.name
       .panel-body
-        = image_tag(item.image.thumb, class: 'img-thumbnail img-responsive')
+        = image_tag(item.image.thumb, class: 'img-thumbnail img-responsive alignment')
         %p=  truncate(item.description, length: 66)
         %p= "$ #{item.price}"
         %p
@@ -15,4 +15,4 @@
               = f.input   :quantity,  input_html: { value: 1 }
               = f.button  :submit,    'Add to basket', class: 'btn btn-success btn-block'
           - else
-            = link_to('Sign in to add', new_user_session_path, class: 'btn btn-default')
+            = link_to('Sign in to add', new_user_session_path, class: 'btn btn-default btn-block')
