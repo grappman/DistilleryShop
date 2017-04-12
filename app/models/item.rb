@@ -9,6 +9,7 @@ class Item < ApplicationRecord
   validates :name,
             :description,
             :price,
+            :discount_quantity,
             presence: true
 
   class << self

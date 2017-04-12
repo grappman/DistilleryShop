@@ -30,7 +30,7 @@ class User < ApplicationRecord
     orders.update_all(status: 1)
   end
 
-    def total_price
+  def total_price
     orders.inject(0) { |sum, p| sum + p.total_price }
   end
 

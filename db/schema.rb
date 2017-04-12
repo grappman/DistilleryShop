@@ -16,20 +16,22 @@ ActiveRecord::Schema.define(version: 20170401110246) do
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.string   "code",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",                         null: false
+    t.string   "code",                         null: false
+    t.integer  "discount_percent", default: 0, null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
   create_table "items", force: :cascade do |t|
-    t.string   "name",                      null: false
-    t.string   "description",               null: false
+    t.string   "name",                            null: false
+    t.string   "description",                     null: false
     t.string   "image"
-    t.float    "price",       default: 0.0, null: false
-    t.integer  "category_id",               null: false
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.float    "price",             default: 0.0, null: false
+    t.integer  "discount_quantity", default: 0,   null: false
+    t.integer  "category_id",                     null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.index ["category_id"], name: "index_items_on_category_id", using: :btree
   end
 

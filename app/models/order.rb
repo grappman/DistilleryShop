@@ -21,7 +21,11 @@ class Order < ApplicationRecord
               uniqueness: { scope: [:user, :status] }
 
   def total_price
-    item.price * quantity
+    if item.discount_quantity >= quantity
+      (item.price * quantity) - (item.price * quantity / 100 * item.category.discount_percent)
+    else
+      item.price * quantity
+    end
   end
 
 end

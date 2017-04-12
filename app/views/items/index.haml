@@ -8,10 +8,10 @@
       .panel.panel-default
         .panel-heading
           %h1.panel-title
-            = @category.present? ? @category.name : 'ALL'
+            = @category.present? ? @category.name : 'All'
         .panel-body
           .row
-            - if @items.popular.present?
+            - if @items.present?
               = render(partial: 'items/partials/item', collection: @items)
-            -else
-              %h2.text-center Popular Items Don't Exist
+            - else
+              %h1.text-center= 'Popular items not exist'

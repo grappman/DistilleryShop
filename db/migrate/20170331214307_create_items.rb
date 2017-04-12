@@ -7,6 +7,8 @@ class CreateItems < ActiveRecord::Migration[5.0]
 
       t.float   :price,        null: false, default: 0
 
+      t.integer :discount_quantity, null: false, default: 0
+
       t.references :category,  null: false
 
       t.timestamps

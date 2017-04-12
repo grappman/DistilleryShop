@@ -6,28 +6,31 @@ namespace :create do
     Category.create(
         [
             {
-                name:          'IT',
-                code:          '1',
+                name:              'IT',
+                code:              '1',
             },
             {
-                name:          'Furniture',
-                code:          '2',
+                name:              'Furniture',
+                code:              '2',
             },
             {
-                name:          'Clothing',
-                code:          '3',
+                name:              'Clothing',
+                code:              '3',
+                discount_percent:   5
             },
             {
-                name:          'Shoes',
-                code:          '4',
+                name:               'Shoes',
+                code:               '4',
+                discount_percent:   5
             },
             {
-                name:          'Candy',
-                code:          '5',
+                name:               'Candy',
+                code:               '5',
             },
             {
-                name:          'Detergents',
-                code:          '6',
+                name:               'Detergents',
+                code:               '6',
+                discount_percent:   7
             },
         ]
     )

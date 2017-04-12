@@ -12,7 +12,8 @@
         = navigation_bar('Home',    root_url)
         = navigation_bar('Items',   items_path)
         = navigation_bar('Basket',  user_orders_path(current_user))          if user_signed_in?
+        -#%li.text-center= "Your email: #{current_user.email}"                 if current_user.present
       %ul.nav.navbar-nav.navbar-right
         = navigation_bar('Sign in',   new_user_session_path)                 unless user_signed_in?
-        = navigation_bar('Sign up',   new_user_registration_path)  unless user_signed_in?
+        = navigation_bar('Sign up',   new_user_registration_path)            unless user_signed_in?
         = navigation_bar('Sign out',  destroy_user_session_path, :delete)    if user_signed_in?

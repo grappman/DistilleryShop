@@ -10,7 +10,7 @@ namespace :create do
                 description:   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada enim eu ornare efficitur. Etiam porta nisi in felis tempus, vel dapibus felis venenatis. Etiam ut orci vitae mi bibendum vulputate dapibus in ligula. Quisque ut luctus enim, eu viverra augue. Praesent semper orci eu diam consequat mollis.',
                 price:         998.99,
                 image:         File.open('app/assets/images/items/air-macbook-600x600.jpg'),
-                category_id:   1
+                category_id:   1,
             },
             {
                 name:          'Intel Core i7 7700K',
@@ -66,14 +66,18 @@ namespace :create do
                 description:   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada enim eu ornare efficitur. Etiam porta nisi in felis tempus, vel dapibus felis venenatis. Etiam ut orci vitae mi bibendum vulputate dapibus in ligula. Quisque ut luctus enim, eu viverra augue. Praesent semper orci eu diam consequat mollis.',
                 price:         16.99,
                 image:         File.open('app/assets/images/items/t-short.jpg'),
-                category_id:   3
+                category_id:   3,
+                discount_quantity:  3
+
             },
             {
                 name:          'Hipster Jeans',
                 description:   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada enim eu ornare efficitur. Etiam porta nisi in felis tempus, vel dapibus felis venenatis. Etiam ut orci vitae mi bibendum vulputate dapibus in ligula. Quisque ut luctus enim, eu viverra augue. Praesent semper orci eu diam consequat mollis.',
                 price:         22.99,
                 image:         File.open('app/assets/images/items/jeans.jpg'),
-                category_id:   3
+                category_id:   3,
+                discount_quantity:  3
+
             },
             {
                 name:          'Pullover',
@@ -87,21 +91,27 @@ namespace :create do
                 description:   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada enim eu ornare efficitur. Etiam porta nisi in felis tempus, vel dapibus felis venenatis. Etiam ut orci vitae mi bibendum vulputate dapibus in ligula. Quisque ut luctus enim, eu viverra augue. Praesent semper orci eu diam consequat mollis.',
                 price:         44.99,
                 image:         File.open('app/assets/images/items/jacket.jpg'),
-                category_id:   3
+                category_id:   3,
+                discount_quantity:  4
+
             },
             {
                 name:          'Vans Sneakers',
                 description:   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada enim eu ornare efficitur. Etiam porta nisi in felis tempus, vel dapibus felis venenatis. Etiam ut orci vitae mi bibendum vulputate dapibus in ligula. Quisque ut luctus enim, eu viverra augue. Praesent semper orci eu diam consequat mollis.',
                 price:         66.99,
                 image:         File.open('app/assets/images/items/vans.jpg'),
-                category_id:   4
+                category_id:   4,
+                discount_quantity:  3
+
             },
             {
                 name:          'Nike Air Max 90',
                 description:   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada enim eu ornare efficitur. Etiam porta nisi in felis tempus, vel dapibus felis venenatis. Etiam ut orci vitae mi bibendum vulputate dapibus in ligula. Quisque ut luctus enim, eu viverra augue. Praesent semper orci eu diam consequat mollis.',
                 price:         66.99,
                 image:         File.open('app/assets/images/items/air_max.jpg'),
-                category_id:   4
+                category_id:   4,
+                discount_quantity:  3
+
             },
             {
                 name:          'Twix',
@@ -129,14 +139,18 @@ namespace :create do
                 description:   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada enim eu ornare efficitur. Etiam porta nisi in felis tempus, vel dapibus felis venenatis. Etiam ut orci vitae mi bibendum vulputate dapibus in ligula. Quisque ut luctus enim, eu viverra augue. Praesent semper orci eu diam consequat mollis.',
                 price:         1.99,
                 image:         File.open('app/assets/images/items/fary.jpg'),
-                category_id:   6
-            },
+                category_id:   6,
+                discount_quantity:  6
+
+    },
             {
                 name:          'Mr.Proper',
                 description:   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada enim eu ornare efficitur. Etiam porta nisi in felis tempus, vel dapibus felis venenatis. Etiam ut orci vitae mi bibendum vulputate dapibus in ligula. Quisque ut luctus enim, eu viverra augue. Praesent semper orci eu diam consequat mollis.',
                 price:         2.49,
                 image:         File.open('app/assets/images/items/proper.jpeg'),
-                category_id:   6
+                category_id:   6,
+                discount_quantity:  3
+
             },
         ]
     )
