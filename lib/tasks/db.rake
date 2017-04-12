@@ -20,12 +20,12 @@ namespace :db do
 
   desc 'Reload db for dev'
   task reload: :environment do
-    Rake::Task['tmp:clear'].execute
-    Rake::Task['log:clear'].execute
-    Rake::Task['tmp:create'].execute
-    Rake::Task['db:destroy_pg_sessions'].execute
-    Rake::Task['db:drop'].execute
-    Rake::Task['db:create'].execute
+    # Rake::Task['tmp:clear'].execute
+    # Rake::Task['log:clear'].execute
+    # Rake::Task['tmp:create'].execute
+    # Rake::Task['db:destroy_pg_sessions'].execute
+    # Rake::Task['db:drop'].execute
+    # Rake::Task['db:create'].execute
     Rake::Task['db:migrate'].execute
     Rake::Task['db:seed'].execute
 
