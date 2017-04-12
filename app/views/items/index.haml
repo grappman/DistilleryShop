@@ -11,4 +11,7 @@
             = @category.present? ? @category.name : 'ALL'
         .panel-body
           .row
-            = render(partial: 'items/partials/item', collection: @items)
+            - if @items.popular.present?
+              = render(partial: 'items/partials/item', collection: @items)
+            -else
+              %h2.text-center Popular Items Don't Exist
